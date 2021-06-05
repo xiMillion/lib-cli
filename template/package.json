@@ -1,0 +1,28 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lib run dev",
+    "build": "lib run build"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+
+  },
+  "dependencies": {
+
+  },
+  "browserslist": {
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ],
+    "production": [
+      ">0.1%"
+    ]
+  }
+}
