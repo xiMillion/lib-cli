@@ -222,6 +222,7 @@ module.exports = {
             new webpack.DefinePlugin((()=>{
                 const option = {
                     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+                    'process.env.BASEURL': JSON.stringify(setting.publicPath)
                 };
                 for(let k in envOption){
                     option[k] = JSON.stringify(envOption[k])

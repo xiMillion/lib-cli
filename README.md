@@ -56,7 +56,8 @@ init 可简写 i ，project 为创建的目录名称,--current或-c 代表本目
 --development --production 代表webpack环境，简写 -d -p 设置命令的环境
 
 
-### 转换语言包
+### 转换语言包   
+通过一个写好的语言作为模板生成不同语言json
 <code>lib lang \<template\> \<type...\> [--output] [--entry]</code>
 
 在项目根目录下创建 template.json 文件，配置中文，或英文 模板
@@ -68,3 +69,14 @@ template 语言模板包名称
 type 转换的语言 可配多个  
 --output或-o 可配置输出地址默认lang  <code>lib lang template zh-CN en -o langs</code>  
 --entry或-e 可配置入口地址默认根目录  <code>lib lang template zh-CN en -e src/template </code>
+
+
+### 环境变量
+在项目 webpack 目录下有两个 dev json文件，在运行不同环境下，会将当前的变量注入到全局中，可在项目中使用   
+默认有两个 
+“process.env.NODE_ENV”  -- 当前环境
+“process.env.BASEURL”   -- webpack配置的publicPath
+
+
+### webpack配置
+webpack下还有个lib.config.js 用来快捷配置一些功能，例如代码压缩，打包地址目录等等，如果不满足修改同级的webpack.config.js文件

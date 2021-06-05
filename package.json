@@ -1,6 +1,6 @@
 {
   "name": "@xiui/lib-cli",
-  "version": "0.0.3",
+  "version": "0.2.0",
   "description": "一个基于webpack5 快速搭建js库的cli",
   "bin": {
     "lib": "bin/bin.js"
