@@ -65,7 +65,7 @@ module.exports = {
     target: 'web',
     // 入口起点
     entry: {
-        {{project}}: './src/index.{{jsType}}',
+        [`'${package.name}'`]: './src/index.{{jsType}}',
     },
     // 输出
     output: {
@@ -97,7 +97,13 @@ module.exports = {
         minimize: true,
         minimizer: (()=>{
             const minimizer = [];
-            setting.js.compress && minimizer.push(new TerserWebpackPlugin());
+            setting.js.compress && minimizer.push(new TerserWebpackPlugin({
+                terserOptions: {
+                    compress: {
+                        drop_console: setting.js.console,
+                    },
+                }
+            }));
             setting.css.compress && minimizer.push(new CssMinimizerPlugin());
             setting.notice && minimizer.push(new NotesWebpackPlugin(`[name] v[version]`
                 + `\n`

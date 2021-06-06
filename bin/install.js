@@ -52,6 +52,7 @@ module.exports = function (name, { styleType, fun },isCu) {
     "webpack-cli",
     "webpack-dev-server",
     "thread-loader",
+    "@xiui/lib-cli",
     "@xiui/webpack-plugin-notes"
   ];
 

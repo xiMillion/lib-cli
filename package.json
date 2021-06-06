@@ -2,8 +2,8 @@
   "name": "@xiui/lib-cli",
   "version": "0.2.0",
   "description": "一个基于webpack5 快速搭建js库的cli",
-  "repository":"https://www.npmjs.com/package/@xiui/lib-cli",
-  "homepage":"https://github.com/xiMillion/lib-cli",
+  "repository": "https://www.npmjs.com/package/@xiui/lib-cli",
+  "homepage": "https://github.com/xiMillion/lib-cli",
   "bin": {
     "lib": "bin/bin.js"
   },

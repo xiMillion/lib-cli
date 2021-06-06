@@ -25,7 +25,9 @@ module.exports = {
         //输出目录  js/
         outputPath:'',
         //开启多进程
-        thread: false
+        thread: false,
+        //压缩删除console.log
+        console: true
     },
     img:{
         //打包图片大小

@@ -49,9 +49,9 @@ program.command('init <project>')
 .option('-c,--current','是否当前目录',false)
 .action((project,option) => {
 
-    if(!/^[0-9a-zA-Z]*$/g.test(project)){
-        return log(logSymbols.error,'只能是数字或字母!');
-    }
+    // if(!/^[0-9a-zA-Z]*$/g.test(project)){
+    //     return log(logSymbols.error,'只能是数字或字母!');
+    // }
 
     switchFn(function (setting) {
         //创建文件
