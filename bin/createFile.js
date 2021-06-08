@@ -96,7 +96,7 @@ module.exports = function(setting,name,isCu){
         requirePwa: isPwa ? "const WorkboxWebpackPlugin = require('workbox-webpack-plugin');" : '',
         pwaPlugin: isPwa ? pwaPlugin : '',
         requireEslint: isEslint ? "const ESLintPlugin = require('eslint-webpack-plugin');" : '',
-        eslintPlugin: isEslint ?  "new ESLintPlugin()," : '',
+        eslintPlugin: isEslint ?  `new ESLintPlugin({extensions: '${jsSuffix}', fix: true}),` : '',
         cssSuffix: cssSuffix,
         serviceWorkerJS: isPwa ? serviceWorkerJS : '',
         esExtends: isTs ? '"plugin:@typescript-eslint/recommended"' : '',
